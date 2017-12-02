@@ -10,6 +10,7 @@
 
 @ cordic algorithm to find cos(theta), sin(theta), and tan(theta)
 @ this program gets precision to the 6th decimal point
+@ this program is only meant to handle angles from 0 to 90 degrees
 
 @ this mostly imitates a program from this document http://bsvi.ru/uploads/CORDIC--_10EBA/cordic.pdf
 @   as well as helped me better understand how the cordic equation as a whole
