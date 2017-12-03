@@ -109,8 +109,6 @@ less_than:
         mov r0, r6
         mov r1, r7
         
-        b check
-        
 check:
         cmp r5, #27                 @ check if at end of loop
         bne sincos_cordic           @ if not then jump back to sincos_cordic
@@ -118,6 +116,11 @@ check:
 @ the current values in r0 and r1 are the integer values that if divided by 2^20, grants
 @   cos(theta) and sin(theta) respectively        
 find_cos_sin_tan:
+        ldr r9, =x
+        str r0, [r9]
+        ldr r9, =y
+        str r1, [r9]
+
         vmov s0, r0                 @ load x and y into single float point registers
         vmov s1, r1
         ldr r9, =factor             @ load factor (2^20)
